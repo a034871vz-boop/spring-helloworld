@@ -7,13 +7,13 @@ public class App {
         HelloWorld bean1 = (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean1.getMessage());
 
-        HelloWorld bean2 = (HelloWorld) applicationContext.getBean("helloworld");
+        HelloWorld bean2 = (HelloWorld) applicationContext.getBean("helloworld", HelloWorld.class);
         System.out.println(bean2.getMessage());
 
-        Cat bean3 = (Cat) applicationContext.getBean("cat");
+        Cat bean3 = applicationContext.getBean("c", Cat.class);
         System.out.println(bean3.getMessage());
 
-        Cat bean4 = (Cat) applicationContext.getBean("cat");
+        Cat bean4 = (Cat) applicationContext.getBean("c");
         System.out.println(bean4.getMessage());
 
         System.out.println(bean1 == bean2);
